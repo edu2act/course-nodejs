@@ -1,0 +1,96 @@
+<%-include head3%>
+<!--左侧开始-->
+<div class="container row top">
+    <div class="col-md-3">
+        <div class="showborder bg1 pad2">
+            <img src="<%=imgpath%>" width="80" height="80" class="img-rounded left">
+            <div class="pad1 left pad1"><br><%=user%><br><span><a href="#">@xiangrikui</a></span></div>
+            <p class="clear pad1">推文：0</p>
+        </div>
+        <div class="showborder mar1 pad1">
+            <h4>发表推文</h4>
+            <p>说说你是谁、以及有趣的事</p>
+            <form method="post">
+                <textarea name="post" cols="30" rows="10"></textarea>
+                <p class="red">发表的文字不能超过140个字符</p>
+                <button class="btn btn-primary btn-block">推文 </button>
+            </form>
+        </div>
+        <div class="showborder pad1">
+            <h4>微博达人</h4>
+            <ul>
+                <li><h5>水谷优子</h5>
+                    <p>13.5万推文</p>
+                </li>
+                <li><h5>我的小苹果</h5>
+                    <p>12.5万推文</p>
+                </li>
+                <li><h5>也不知道</h5>
+                    <p>11.5万推文</p>
+                </li>
+                <li><h5>帅了个帅哦</h5>
+                    <p>10.5万推文</p>
+                </li>
+                <li><h5>美丽的美洲驼</h5>
+                    <p>10.11万推文</p>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <!--左侧结束-->
+    <!--中间主体开始-->
+    <div class="col-md-6">
+        <div class="showborder">
+            <div class="bg2 pad1">
+                <form name="form1" method="post" action="">
+                    <input type="image" src="images/t01.jpeg" align="top" width="25" height="25">
+                    <label for="txt"></label>
+                    <input name="txt" type="text" id="txt" class="width1" placeholder="有什么新鲜事">
+                    <input type="image" src="images/icon5.jpg" align="top" width="25" height="25">
+                </form>
+            </div>
+            <div class="pad1 cen">
+                <img src="images/logo.png" width="30" height="30"><br>
+                你的时间线还是空的，关注你感兴趣的人或话题，在时间线上可以看到他们的推文。
+            </div>
+            <hr>
+            <ul class="ul">
+                <% posts.forEach(function (post,blog) { %>
+                <li class="showborder2 pad1">
+                    <img src="<%=imgpath%>" width="60" height="60" class="img-rounded left">
+                    <div class="left pad1"><%=user%><a href="#">@xiangrikui</a><span class="pad3 red">
+                            <%= post.time.minute %></span><br>
+                        <span class="blue">个人简介：没有最好！只有更好！</span>
+                    </div>
+                    <div class="clear pad1">
+                        <%- post.post %>
+                    </div>
+                </li>
+                <% }) %>
+            </ul>
+        </div>
+    </div>
+    <!--中间主体结束-->
+    <!--右侧开始-->
+    <div class="col-md-3">
+        <div class="showborder pad1 clear">
+            <h4>推荐关注</h4>
+            <ul class="ul">
+                <li>
+                    <img src="images/t01.jpeg" width="60" height="60" class="img-rounded left">
+                    <div class="left pad1">向日葵<a href="#">@xiangrikui</a><br>
+                        <span><button class="btn-group"><img src="images/icon6.png" width="20" height="20">关注</button></span>
+                    </div><div class="clear"></div>
+                </li>
+                <li>
+                    <img src="images/t02.jpg" width="60" height="60" class="img-rounded left">
+                    <div class="left pad1">金色的太阳<a href="#">@xiangrikui</a><br>
+                        <span><button class="btn-group"><img src="images/icon6.png" width="20" height="20">关注</button></span>
+                    </div><div class="clear"></div>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+<!--右侧结束-->
+<%-include footer%>

@@ -1,0 +1,47 @@
+<%-include head1%>
+<div class="container-fluid row top width1 height1">
+    <div class="col-md-8 color1 left top">
+        <h1>Welcome to Twitter</h1><br>
+        <p class="lead">联系你的好友和更多精彩。</p>
+        <p class="lead">获取你感兴趣的实时更新。</p>
+        <p class="lead">并通过每个视角观看事件实时呈现。</p>
+    </div>
+    <div class="col-md-4 right color1">
+        <div>
+            <form class="form-signin" method="post" action="/">
+                <h2 class="form-signin-heading">登录</h2>
+                <label for="name" class="sr-only">用户名、手机、邮箱</label>
+                <input type="text" name="name" class="form-control" placeholder="用户名、手机、邮箱" required autofocus>
+                <label for="password" class="sr-only">密码</label>
+                <input type="password" name="password" class="form-control mar1" placeholder="密码" required>
+                <div class="checkbox">
+                    <label>
+                        <input type="checkbox" value="remember-me"> 记录，忘记密码
+                    </label>
+                </div>
+                <% if (success) { %>
+                <div><%= success %></div>
+                <% } %>
+                <% if (error) { %>
+                <div><%= error %> </div>
+                <% } %>
+                <button class="btn btn-lg btn-primary btn-block" type="submit">登录</button>
+            </form>
+        </div>
+        <div>
+            <form class="form-signin" method="post" action="/reg1">
+                <h2 class="form-signin-heading">新用户</h2>
+                <label for="name" class="sr-only">全名</label>
+                <input type="text" name"name" class="form-control" placeholder="全名" required autofocus>
+                <label for="email" class="sr-only">邮箱地址</label>
+                <input type="email" name="email" class="form-control mar1" placeholder="邮箱地址" required autofocus>
+                <label for="Password" class="sr-only">密码</label>
+                <input type="password" name="password" class="form-control" placeholder="密码" required>
+                <label for="Password2" class="sr-only">确认密码</label>
+                <input type="password" name="password2" class="form-control" placeholder="确认密码" required>
+                <button class="btn btn-lg btn-primary btn-block mar1" type="submit">注册</button>
+            </form>
+        </div>
+    </div>
+</div>
+<%-include footer%>

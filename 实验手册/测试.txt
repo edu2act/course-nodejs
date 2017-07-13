@@ -1,0 +1,2 @@
+以管理员身份运行： 
+mongod --logpath d:\mongodb\log\mongo.log --logappend --dbpath d:\mongodb\data\db --serviceName MongoDB --install

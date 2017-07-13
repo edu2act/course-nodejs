@@ -1,0 +1,10 @@
+console.log('-------process system info process +cpu--------');
+console.info('运行当前进程可执行文件的绝对路径:');
+console.info(process.execPath);
+console.info('当前进程的命令行参数数组');
+console.info(process.argv);
+console.info('当前系统平台：');
+console.info(process.platform);
+console.info('当前CPU架构');
+console.info(process.arch);
+console.log('-------process system info process +cpu--------');

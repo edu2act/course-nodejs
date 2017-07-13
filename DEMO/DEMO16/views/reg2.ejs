@@ -1,0 +1,38 @@
+<%-include head2%>
+<div class="container-fluid row top">
+    <div class="col-md-3"></div>
+    <div class="col-md-6 mar1 pad1">
+        <h1>你对什么感兴趣？</h1>
+        <h3 class="blue">请选择以下选项，我们会您一些好的建议。</h3>
+        <form name="form1" method="post" action="/reg3"  class="form-signin">
+            <p>
+                <input type="checkbox" name="news" id="news">
+                <label for="news">新闻</label>
+            </p>
+            <p>
+                <input type="checkbox" name="pe" id="pe">
+                <label for="pe">体育</label>
+            </p>
+            <p>
+                <input type="checkbox" name="yule" id="yule">
+                <label for="yule">娱乐</label>
+            </p>
+            <p>
+                <input type="checkbox" name="xiuxian" id="xiuxian">
+                <label for="xiuxian">休闲</label>
+            </p>
+            <p>
+                <input type="checkbox" name="music" id="music">
+                <label for="music">音乐</label>
+            </p>
+            <p>
+                <input type="checkbox" name="live" id="live">
+                <label for="live">生活方式</label>
+            </p>
+            <input type="submit" value="继续下一步！设置我的个人信息" class="btn btn-primary">
+        </form>
+    </div>
+    <div class="col-md-3 pad1">
+    </div>
+</div>
+<%-include footer%>
