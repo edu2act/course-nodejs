@@ -1,8 +1,0 @@
-{
-  "name":"test",
-  "main":"./lib/package.js",
-  "dependencies": {
-    "express":"4.13.0",
-    "mongodb":"2.2.0"
-  }
-}

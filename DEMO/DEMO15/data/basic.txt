@@ -1,5 +1,0 @@
-﻿console.log('------------stream readable pipe-----------');
-console.info();
-var fs=require('fs');
-var readable=fs.createReadStream('data/unpipe1.txt');
-var writable=fs.createWriteStream('data/unpipe2.txt');
