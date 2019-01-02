@@ -1,22 +1,22 @@
 #!/usr/bin/node
 
-var EventEmitter = require('events').EventEmitter;
-var emitter = new EventEmitter();
+const EventEmitter = require('events').EventEmitter;
+var e = new EventEmitter();
 
-console.log('start...');
+setInterval(() => {
+  e.emit('hello');
+}, 1000);
 
-emitter.on('hello', function() {
-  console.log('received hello event');
+setTimeout(() => {
+  e.emit('bye');
+}, 5000);
+
+e.on('hello', () => {
+  console.log('hello world!');
 });
 
-emitter.on('bye', function() {
-  console.log('received bye event');
+e.on('bye', () => {
+  console.log('goodbye!');
+  process.exit();
 });
 
-setTimeout(function() {
-  emitter.emit('hello');
-}, 500);
-
-setTimeout(function() {
-  emitter.emit('bye');
-}, 2000);

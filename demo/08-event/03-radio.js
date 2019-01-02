@@ -1,22 +1,22 @@
 #!/usr/bin/node
 
-var events = require('events');
-var util = require('util');
+const EventEmitter = require('events').EventEmitter,
+      util         = require('util');
 
-var Radio = function(station) {
-  events.EventEmitter.call(this);
+function Radio(station) {
+  EventEmitter.call(this);
 
   var self = this;
 
-  setTimeout(function() {
+  setTimeout(() => {
     self.emit('open', station);
   }, 0);
 
-  setTimeout(function() {
+  setTimeout(() => {
     self.emit('stop', station);
   }, 5000);
 }
 
-util.inherits(Radio, events.EventEmitter);
+util.inherits(Radio, EventEmitter);
 
 module.exports = Radio;

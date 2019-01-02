@@ -1,36 +1,37 @@
 # Node.js 应用开发
 
-Node.js 应用开发。
+[本电子书](https://nodejs.wangding.in)含 Node.js 应用开发课程的全部教学资料，包括：课程大纲、学习交流 QQ 群、课程视频、幻灯片、通关任务以及示例代码。
 
-## <img src="https://raw.githubusercontent.com/wangding/courses/master/images/video.png" height="30">课程视频
+## 课程大纲
+
+[Node.js 应用开发课程大纲](http://naotu.baidu.com/file/78f10df711456bbfed4cd77fcfa19045?token=7e206da2e15795da)
+
+## 学习交流群
+
+王顶老师的 QQ 学习交流群：301862163，加群时请报上自己的真实姓名，以及正在学习的课程内容。
+
+<img src="images/student-group.jpg" height="400">
+
+## 课程视频
 
 - [Node.js 应用开发（上）](https://ke.qq.com/course/244604)  
 - [Node.js 应用开发（中）](https://ke.qq.com/course/252061)  
+- [Node.js 应用开发（下）](#)  
 
-## <img src="https://raw.githubusercontent.com/wangding/courses/master/images/presentation.png" height="30">幻灯片
+【说明】  
+- Node.js 应用开发（下）课程视频并不完整，因此没有上传视频网站。如有需要，请加 QQ 群，在群文件共享中下载。
 
-- [Node.js 应用开发（上）](nodejs01.pptx)  
-- [Node.js 应用开发（中）](nodejs02.pptx)  
+## 幻灯片
 
-## <img src="https://raw.githubusercontent.com/wangding/courses/master/images/homework.png" height="30">作业任务
+- [Node.js 应用开发（上）](https://github.com/wangding/courses/blob/master/nodejs/nodejs01.pptx)  
+- [Node.js 应用开发（中）](https://github.com/wangding/courses/blob/master/nodejs/nodejs02.pptx)  
+- [Node.js 应用开发（下）](https://github.com/wangding/courses/blob/master/nodejs/nodejs03.pptx)  
 
-- [上篇闯关任务](task01.md)  
-- [中篇闯关任务](task02.md)  
-- [下篇闯关任务](task03.md)  
+## 通关任务
 
-## <img src="https://raw.githubusercontent.com/wangding/courses/master/images/code.png" height="30">示例代码
+按课程讲授的顺序，排列在电子书左侧导航中，所有通关任务对应有参考的示例代码，请见下面 nodejs-demo 仓库的链接。
 
-- [Node.js 应用开发课程示例代码](demo/)  
+## 示例代码
 
-## :books:参考资料
-
-- [Node.js 中文 API](http://nodejs.cn/api/)  
-- [Node.js 阮一锋](http://javascript.ruanyifeng.com/nodejs/basic.html)  
-- 电子书百度网盘链接: http://pan.baidu.com/s/1nuU6C8h 提取密码: h6jc
-
-## :hammer:搭建开发环境所需软件
-
-- [VMware workstation Pro 12](http://rj.baidu.com/soft/detail/13808.html?ald)
-- [mocha.ova](http://pan.baidu.com/s/1o8a3E3o)
-- [XShell 5](http://rj.baidu.com/soft/detail/15201.html)
+- [Demo Code](https://github.com/wangding/nodejs-demo)  
 

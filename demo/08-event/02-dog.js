@@ -1,25 +1,31 @@
 #!/usr/bin/node
 
-var events = require('events');
+const EventEmitter = require('events').EventEmitter;
 
+function Dog(name, energy) {
+  var _name, _energy;
+  var that = this;
 
-function Dog(name) {
-  events.EventEmitter.call(this);
+  EventEmitter.call(this);
+  _name = name;
+  _energy = energy;
 
-  var self = this;
-  this.name = name;
+  var timer = setInterval(() => {
+    if(energy > 0) {
+      that.emit('bark');
+      _energy--;
+    }
 
-  var timer = setInterval(function() {
-    //console.log('self:', self);
-    //console.log('this:', this);
-    self.emit('bark');
+    if(_energy < 0) {
+      global.clearInterval(timer);
+    }
   }, 1000);
 
-  this.stop = function() {
-    clearInterval(timer);
-  }
+  this.name = () => _name;
+    
+  this.energy = () => _energy;
 }
 
-Dog.prototype.__proto__ = events.EventEmitter.prototype;
+Dog.prototype = EventEmitter.prototype;
 
 module.exports = Dog;

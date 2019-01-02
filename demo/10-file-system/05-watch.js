@@ -1,16 +1,16 @@
 #!/usr/bin/node
 
-var fs = require('fs');
+const fs = require('fs');
 
 var w = fs.watch(__dirname, console.log);
 
-process.on('SIGINT', function() {
+process.on('SIGINT', () => {
   w.close();
 
   console.log('unwitch the directory');
   console.log('Game over after ten second...');
 
-  setTimeout(function() {
+  setTimeout(() => {
     process.exit();
-  }, 10000);
+  }, 5000);
 });

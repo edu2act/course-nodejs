@@ -1,7 +1,7 @@
 #!/usr/bin/node
 
-var http = require('http');
+const http = require('http');
 
-http.createServer(function(req, res) {
+http.createServer((req, res) => {
   res.end('hello world');
 }).listen(8080);
